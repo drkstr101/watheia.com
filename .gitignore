@@ -52,3 +52,7 @@ Thumbs.db
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Serverless
+.serverless
+.webpack
