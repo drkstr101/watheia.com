@@ -10,6 +10,7 @@ import {
   ServerIcon,
   ShieldCheckIcon,
 } from '@heroicons/react/24/outline';
+import Link from 'next/link';
 
 const features = [
   {
@@ -122,23 +123,23 @@ export function Index() {
           <div className="lg:grid lg:grid-cols-2 lg:gap-8">
             <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left">
               <div className="lg:py-24">
-                <a
-                  href="#"
+                <Link
+                  href="/contact"
                   className="inline-flex items-center rounded-full bg-black p-1 pr-2 text-white hover:text-gray-200 sm:text-base lg:text-sm xl:text-base"
                 >
                   <span className="rounded-full bg-gradient-to-r from-teal-500 to-cyan-600 px-3 py-0.5 text-sm font-semibold leading-5 text-white">
-                    We&apos;re hiring
+                    Hire us
                   </span>
-                  <span className="ml-4 text-sm">Visit our careers page</span>
+                  <span className="ml-4 text-sm">Book free consultation</span>
                   <ChevronRightIcon
                     className="ml-2 h-5 w-5 text-gray-500"
                     aria-hidden="true"
                   />
-                </a>
+                </Link>
                 <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                  <span className="block">A better way to</span>
+                  <span className="block">We make technology</span>
                   <span className="block bg-gradient-to-r from-teal-200 to-cyan-400 bg-clip-text pb-3 text-transparent sm:pb-5">
-                    ship web apps
+                    Work for you
                   </span>
                 </h1>
                 <p className="text-base text-gray-300 sm:text-xl lg:text-lg xl:text-xl">
@@ -203,7 +204,7 @@ export function Index() {
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               No server? No problem.
             </p>
-            <p className="mx-auto mt-5 max-w-prose text-xl text-gray-500">
+            <p className="mx-auto mt-5 max-w-prose text-xl text-gray-700">
               Phasellus lorem quam molestie id quisque diam aenean nulla in.
               Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend
               condimentum id viverra nulla.
@@ -220,7 +221,7 @@ export function Index() {
       </div>
 
       {/* Feature section with grid */}
-      <div className="relative bg-white py-16 sm:py-24 lg:py-32">
+      <div className="relative bg-gray-50 py-16 sm:py-24 lg:py-32">
         <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
           <h2 className="text-lg font-semibold text-cyan-600">Deploy faster</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">

@@ -1,13 +1,13 @@
-import { getGreeting } from '../support/app.po';
+import config from '@waweb/config';
 
 describe('home', () => {
   beforeEach(() => cy.visit('/'));
 
-  it('should display welcome message', () => {
+  it('title SHOULD display company tagline', () => {
     // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
+    // cy.login('my-email@something.com', 'myPassword');
 
     // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome home');
+    cy.get('h1').should('have.text', config.description);
   });
 });

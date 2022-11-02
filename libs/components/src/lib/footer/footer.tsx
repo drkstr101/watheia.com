@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import config from '@waweb/config';
 import { SVGProps } from 'react';
 
 const icons = {
@@ -91,14 +93,16 @@ export function Footer(props: FooterProps) {
       <div className="mx-auto max-w-md px-4 pt-12 sm:max-w-7xl sm:px-6 lg:px-8 lg:pt-16">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
-            <img
-              className="h-10"
+            <Image
+              width={621}
+              height={220}
+              priority
+              className="w-48 lg:w-96"
               src="https://www.datocms-assets.com/63265/1646107055-logo-alt.png"
-              alt="Company name"
+              alt={config.company.name}
             />
             <p className="text-base text-gray-500">
-              Making the world a better place through constructing elegant
-              hierarchies.
+              {config.company.description}
             </p>
             <div className="flex space-x-6">
               {footerNavigation.social.map((item) => (
@@ -181,7 +185,7 @@ export function Footer(props: FooterProps) {
         </div>
         <div className="mt-12 border-t border-gray-200 py-8">
           <p className="text-base text-gray-400 xl:text-center">
-            &copy; 2020 Your Company, Inc. All rights reserved.
+            &copy; 2022 Watheia Labs, LLC. All rights reserved.
           </p>
         </div>
       </div>

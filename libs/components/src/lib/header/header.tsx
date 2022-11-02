@@ -1,6 +1,9 @@
 import { Popover, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
+import Link from 'next/link';
 import { Fragment } from 'react';
+import config from '@waweb/config';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -21,14 +24,19 @@ export function Header(props: HeaderProps) {
         >
           <div className="flex flex-1 items-center">
             <div className="flex w-full items-center justify-between md:w-auto">
-              <a href="#">
-                <span className="sr-only">Your Company</span>
-                <img
-                  className="h-8 w-auto sm:h-10"
-                  src="https://www.datocms-assets.com/63265/1646107015-logo.png"
-                  alt=""
-                />
-              </a>
+              <Link href="/">
+                <>
+                  <span className="sr-only">{config.company.name}</span>
+                  <Image
+                    width={640}
+                    height={220}
+                    className="w-16 sm:w-20"
+                    priority
+                    src="https://www.datocms-assets.com/63265/1646107015-logo.png"
+                    alt=""
+                  />
+                </>
+              </Link>
               <div className="-mr-2 flex items-center md:hidden">
                 <Popover.Button className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-gray-900 p-2 text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
                   <span className="sr-only">Open main menu</span>
@@ -38,23 +46,23 @@ export function Header(props: HeaderProps) {
             </div>
             <div className="hidden space-x-8 md:ml-10 md:flex">
               {navigation.map((item) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
                   className="text-base font-medium text-white hover:text-gray-300"
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
           <div className="hidden md:flex md:items-center md:space-x-6">
-            <a
+            <Link
               href="/sign-in"
               className="text-base font-medium text-white hover:text-gray-300"
             >
               Log in
-            </a>
+            </Link>
           </div>
         </nav>
       </div>
@@ -75,8 +83,11 @@ export function Header(props: HeaderProps) {
           <div className="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-5">
             <div className="flex items-center justify-between px-5 pt-4">
               <div>
-                <img
-                  className="h-8 w-auto"
+                <Image
+                  width={621}
+                  height={220}
+                  priority
+                  className="w-48"
                   src="https://www.datocms-assets.com/63265/1646107055-logo-alt.png"
                   alt=""
                 />
@@ -91,21 +102,24 @@ export function Header(props: HeaderProps) {
             <div className="pt-5 pb-6">
               <div className="space-y-1 px-2">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
                     href={item.href}
                     className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
               <div className="mt-6 px-5">
                 <p className="text-center text-base font-medium text-gray-500">
                   Existing customer?{' '}
-                  <a href="#" className="text-gray-900 hover:underline">
+                  <Link
+                    href="/sign-in"
+                    className="text-gray-900 hover:underline"
+                  >
                     Login
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>
