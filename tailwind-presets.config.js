@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   theme: {
     darkMode: 'class',
@@ -9,7 +11,10 @@ module.exports = {
       typography: {},
       colors: {},
       spacing: {},
-      fontFamily: {},
+      fontFamily: {
+        mono: ["'Fira Mono'", ...defaultTheme.fontFamily.mono],
+        sans: ["'Fira Sans Condensed'", ...defaultTheme.fontFamily.sans],
+      },
     },
   },
   variants: {

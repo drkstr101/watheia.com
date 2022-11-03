@@ -17,7 +17,7 @@ export interface HeaderProps {}
 export function Header(props: HeaderProps) {
   return (
     <Popover as="header" className="relative">
-      <div className="bg-gray-900 py-4">
+      <div className="bg-gray-900 py-2">
         <nav
           className="relative mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6"
           aria-label="Global"
@@ -30,8 +30,7 @@ export function Header(props: HeaderProps) {
                   <Image
                     width={640}
                     height={220}
-                    className="w-16 sm:w-20"
-                    priority
+                    className="w-24"
                     src="https://www.datocms-assets.com/63265/1646107015-logo.png"
                     alt=""
                   />

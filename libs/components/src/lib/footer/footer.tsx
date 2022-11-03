@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import config from '@waweb/config';
 import { SVGProps } from 'react';
 
@@ -93,14 +94,16 @@ export function Footer(props: FooterProps) {
       <div className="mx-auto max-w-md px-4 pt-12 sm:max-w-7xl sm:px-6 lg:px-8 lg:pt-16">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
-            <Image
-              width={621}
-              height={220}
-              priority
-              className="w-48 lg:w-96"
-              src="https://www.datocms-assets.com/63265/1646107055-logo-alt.png"
-              alt={config.company.name}
-            />
+            <Link href="/">
+              <Image
+                width={621}
+                height={220}
+                priority
+                className="w-48 lg:w-96"
+                src="https://www.datocms-assets.com/63265/1646107055-logo-alt.png"
+                alt={config.company.name}
+              />
+            </Link>
             <p className="text-base text-gray-500">
               {config.company.description}
             </p>
