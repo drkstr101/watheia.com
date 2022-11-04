@@ -1,4 +1,4 @@
-import { Footer, Header } from '@waweb/components';
+import { Layout } from '@waweb/components';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import './styles.css';
@@ -21,16 +21,9 @@ const monoFont = Fira_Mono({
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <Head>
-        <title>Watheia Labs | A technology partner that delivers.</title>
-      </Head>
-      <Header />
-      <main className={clsx(sansFont, monoFont)}>
-        <Component {...pageProps} />
-      </main>
-      <Footer />
-    </>
+    <Layout className={clsx(sansFont, monoFont)}>
+      <Component {...pageProps} />
+    </Layout>
   );
 }
 

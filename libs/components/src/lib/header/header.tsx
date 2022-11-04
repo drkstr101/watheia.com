@@ -24,8 +24,9 @@ export function Header(props: HeaderProps) {
         >
           <div className="flex flex-1 items-center">
             <div className="flex w-full items-center justify-between md:w-auto">
-              <Link href="/">
-                <>
+              <Link href="/" legacyBehavior passHref>
+                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                <a>
                   <span className="sr-only">{config.company.name}</span>
                   <Image
                     width={640}
@@ -34,7 +35,7 @@ export function Header(props: HeaderProps) {
                     src="https://www.datocms-assets.com/63265/1646107015-logo.png"
                     alt=""
                   />
-                </>
+                </a>
               </Link>
               <div className="-mr-2 flex items-center md:hidden">
                 <Popover.Button className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-gray-900 p-2 text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
