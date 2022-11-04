@@ -13,6 +13,7 @@ jobs:
     with:
       number-of-agents: 3
       init-commands: |
+        mkdir -p ./.yarn/cache
         yarn exec nx-cloud start-ci-run --stop-agents-after="build" --agent-count=3
       parallel-commands: |
         yarn exec nx-cloud record -- yarn exec nx workspace-lint
