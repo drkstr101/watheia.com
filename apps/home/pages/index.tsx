@@ -428,16 +428,20 @@ const Hero = () => (
               fugiat.
             </p>
             <div className="mt-10 sm:mt-12">
-              <form action="#" className="sm:mx-auto sm:max-w-xl lg:mx-0">
+              <form
+                action="/demo"
+                method="GET"
+                className="sm:mx-auto sm:max-w-xl lg:mx-0"
+              >
                 <div className="sm:flex">
                   <div className="min-w-0 flex-1">
-                    <label htmlFor="email" className="sr-only">
-                      Email address
+                    <label htmlFor="name" className="sr-only">
+                      User name
                     </label>
                     <input
-                      id="email"
-                      type="email"
-                      placeholder="Enter your email"
+                      id="name"
+                      type="text"
+                      placeholder="Enter your name"
                       className="block w-full rounded-md border-0 px-4 py-3 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900"
                     />
                   </div>
@@ -446,18 +450,10 @@ const Hero = () => (
                       type="submit"
                       className="block w-full rounded-md bg-gradient-to-r from-teal-500 to-cyan-600 py-3 px-4 font-medium text-white shadow hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900"
                     >
-                      Start free trial
+                      Go realtime
                     </button>
                   </div>
                 </div>
-                <p className="mt-3 text-sm text-gray-300 sm:mt-4">
-                  Start your free 14-day trial, no credit card necessary. By
-                  providing your email, you agree to our{' '}
-                  <a href="#" className="font-medium text-white">
-                    terms of service
-                  </a>
-                  .
-                </p>
               </form>
             </div>
           </div>

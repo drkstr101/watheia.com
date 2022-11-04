@@ -2,6 +2,7 @@ import { Footer, Header } from '@waweb/components';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import './styles.css';
+// import config from '@waweb/config`
 
 import { Fira_Sans_Condensed, Fira_Mono } from '@next/font/google';
 import clsx from 'clsx';
@@ -22,7 +23,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Welcome to home!</title>
+        <title>Watheia Labs | A technology partner that delivers.</title>
       </Head>
       <Header />
       <main className={clsx(sansFont, monoFont)}>
