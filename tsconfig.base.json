@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@waweb/components": ["libs/components/src/index.ts"],
-      "@waweb/config": ["libs/config/src/index.ts"]
+      "@waweb/config": ["libs/config/src/index.ts"],
+      "@waweb/types": ["libs/types/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
