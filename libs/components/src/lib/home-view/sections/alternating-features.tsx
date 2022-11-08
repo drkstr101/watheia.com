@@ -1,6 +1,6 @@
 import { SectionHeading, DescriptionList } from '@waweb/components';
 import Image from 'next/image';
-import { engineeringFeatures, designFeatures } from '../home-view.data';
+import { home } from '@waweb/content';
 
 const TopDotsPattern = () => (
   <svg
@@ -152,19 +152,16 @@ export default function AlternatingFeatures() {
         <TopDotsPattern />
         <SectionHeading
           title="services"
-          subTitle="What we can offer you"
-          description="We work with"
+          subTitle="What have to offer"
+          description="We enable startups to launch their first MVP, help small businesses reach more customers online, support medium-sized companies in digital transformations, simplify architectures and reduce operations costs for large corporations, and migrate legacy systems for the f500."
         />
 
         <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
           <div className="relative">
             <DescriptionList
-              title="Digital Transformations"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur minima
-      sequi recusandae, porro maiores officia assumenda aliquam laborum ab
-      aliquid veritatis impedit odit adipisci optio iste blanditiis facere.
-      Totam, velit."
-              items={engineeringFeatures}
+              title="Digital Transformation"
+              description="Leverage our experience to quickly deliver digital transformation through technology system development, integration, and modernization."
+              items={home.transformationFeatures}
             />
           </div>
 
@@ -186,11 +183,11 @@ export default function AlternatingFeatures() {
           <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:items-center lg:gap-8">
             <div className="lg:col-start-2">
               <DescriptionList
-                title="UI/UX Design Services"
+                title="Digital Design"
                 description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
                 ex obcaecati natus eligendi delectus, cum deleniti sunt in
                 labore nihil quod quibusdam expedita nemo."
-                items={designFeatures}
+                items={home.designFeatures}
               />
             </div>
 

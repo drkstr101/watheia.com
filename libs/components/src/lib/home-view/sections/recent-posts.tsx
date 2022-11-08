@@ -1,7 +1,7 @@
 import { SectionHeading } from '@waweb/components';
+import { home } from '@waweb/content';
 import Image from 'next/image';
 import Link from 'next/link';
-import { blogPosts } from '../home-view.data';
 
 export default function RecentPosts() {
   return (
@@ -13,7 +13,7 @@ export default function RecentPosts() {
           description="Our musings on engineering, design, business, and more."
         />
         <div className="mx-auto mt-12 grid max-w-md gap-8 px-4 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:grid-cols-3 lg:px-8">
-          {blogPosts.map((post) => (
+          {home.blogPosts.map((post) => (
             <div
               key={post.id}
               className="flex flex-col overflow-hidden rounded-lg hover:shadow-lg"

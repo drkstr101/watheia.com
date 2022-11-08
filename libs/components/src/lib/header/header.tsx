@@ -3,13 +3,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Fragment } from 'react';
-import config from '@waweb/config';
-
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Contact', href: '/contact' },
-];
+import { site } from '@waweb/content';
 
 /* eslint-disable-next-line */
 export interface HeaderProps {}
@@ -27,25 +21,25 @@ export function Header(props: HeaderProps) {
               <Link href="/" legacyBehavior passHref>
                 {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                 <a>
-                  <span className="sr-only">{config.company.name}</span>
+                  <span className="sr-only">{site.logo.caption}</span>
                   <Image
-                    width={640}
-                    height={220}
+                    width={site.logo.dark.width}
+                    height={site.logo.dark.height}
                     className="w-24"
-                    src="https://www.datocms-assets.com/63265/1646107015-logo.png"
-                    alt=""
+                    src={site.logo.dark.url}
+                    alt={site.logo.altText}
                   />
                 </a>
               </Link>
               <div className="-mr-2 flex items-center md:hidden">
-                <Popover.Button className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-gray-900 p-2 text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
+                <Popover.Button className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-gray-900 p-2 text-gray-300 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                 </Popover.Button>
               </div>
             </div>
             <div className="hidden space-x-8 md:ml-10 md:flex">
-              {navigation.map((item) => (
+              {site.navigation.primary.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
@@ -84,12 +78,12 @@ export function Header(props: HeaderProps) {
             <div className="flex items-center justify-between px-5 pt-4">
               <div>
                 <Image
-                  width={621}
-                  height={220}
+                  width={site.logo.light.width}
+                  height={site.logo.light.height}
                   priority
                   className="w-48"
-                  src="https://www.datocms-assets.com/63265/1646107055-logo-alt.png"
-                  alt=""
+                  src={site.logo.light.url}
+                  alt={site.logo.altText}
                 />
               </div>
               <div className="-mr-2">
@@ -101,7 +95,7 @@ export function Header(props: HeaderProps) {
             </div>
             <div className="pt-5 pb-6">
               <div className="space-y-1 px-2">
-                {navigation.map((item) => (
+                {site.navigation.primary.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}

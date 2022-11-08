@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import config from '@waweb/config';
+import { site } from '@waweb/content';
 import { SVGProps } from 'react';
 
 const icons = {
@@ -29,53 +29,12 @@ const icons = {
   ),
 };
 
-const footerNavigation = {
-  solutions: [
-    { name: 'Marketing', href: '#' },
-    { name: 'Analytics', href: '#' },
-    { name: 'Commerce', href: '#' },
-    { name: 'Insights', href: '#' },
-  ],
-  support: [
-    { name: 'Pricing', href: '#' },
-    { name: 'Documentation', href: '#' },
-    { name: 'Guides', href: '#' },
-    { name: 'API Status', href: '#' },
-  ],
-  company: [
-    { name: 'About', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Jobs', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Partners', href: '#' },
-  ],
-  legal: [
-    { name: 'Claim', href: '#' },
-    { name: 'Privacy', href: '#' },
-    { name: 'Terms', href: '#' },
-  ],
-  social: [
-    {
-      name: 'Facebook',
-      href: '#',
-    },
-    {
-      name: 'Twitter',
-      href: '#',
-    },
-    {
-      name: 'GitHub',
-      href: '#',
-    },
-  ],
-};
-
 type BrandName = 'Facebook' | 'Twitter' | 'GitHub';
 
 const SocialLink = ({ name, href }: { name: BrandName; href: string }) => {
   const Icon = icons[name];
   return (
-    <a href={href} className="text-gray-400 hover:text-gray-500">
+    <a href={href} className="text-gray-400 hover:text-gray-700">
       <span className="sr-only">{name}</span>
       <Icon className="h-6 w-6" aria-hidden="true" />
     </a>
@@ -98,20 +57,20 @@ export function Footer(props: FooterProps) {
               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a>
                 <Image
-                  width={621}
-                  height={220}
+                  width={site.logo.light.width}
+                  height={site.logo.light.height}
                   priority
                   className="w-48 lg:w-96"
-                  src="https://www.datocms-assets.com/63265/1646107055-logo-alt.png"
-                  alt={config.company.name}
+                  src={site.logo.light.url}
+                  alt={site.logo.altText}
                 />
               </a>
             </Link>
-            <p className="text-base text-gray-500">
-              {config.company.description}
+            <p className="text-base text-gray-700">
+              {site.company.description}
             </p>
             <div className="flex space-x-6">
-              {footerNavigation.social.map((item) => (
+              {site.navigation.social.map((item) => (
                 <SocialLink
                   key={item.name}
                   name={item.name as BrandName}
@@ -127,11 +86,11 @@ export function Footer(props: FooterProps) {
                   Solutions
                 </h3>
                 <ul className="mt-4 space-y-4">
-                  {footerNavigation.solutions.map((item) => (
+                  {site.navigation.solutions.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-base text-gray-500 hover:text-gray-900"
+                        className="text-base text-gray-700 hover:text-gray-900"
                       >
                         {item.name}
                       </a>
@@ -142,11 +101,11 @@ export function Footer(props: FooterProps) {
               <div className="mt-12 md:mt-0">
                 <h3 className="text-base font-medium text-gray-900">Support</h3>
                 <ul className="mt-4 space-y-4">
-                  {footerNavigation.support.map((item) => (
+                  {site.navigation.support.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-base text-gray-500 hover:text-gray-900"
+                        className="text-base text-gray-700 hover:text-gray-900"
                       >
                         {item.name}
                       </a>
@@ -159,11 +118,11 @@ export function Footer(props: FooterProps) {
               <div>
                 <h3 className="text-base font-medium text-gray-900">Company</h3>
                 <ul className="mt-4 space-y-4">
-                  {footerNavigation.company.map((item) => (
+                  {site.navigation.company.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-base text-gray-500 hover:text-gray-900"
+                        className="text-base text-gray-700 hover:text-gray-900"
                       >
                         {item.name}
                       </a>
@@ -174,11 +133,11 @@ export function Footer(props: FooterProps) {
               <div className="mt-12 md:mt-0">
                 <h3 className="text-base font-medium text-gray-900">Legal</h3>
                 <ul className="mt-4 space-y-4">
-                  {footerNavigation.legal.map((item) => (
+                  {site.navigation.legal.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-base text-gray-500 hover:text-gray-900"
+                        className="text-base text-gray-700 hover:text-gray-900"
                       >
                         {item.name}
                       </a>
@@ -191,7 +150,7 @@ export function Footer(props: FooterProps) {
         </div>
         <div className="mt-12 border-t border-gray-200 py-8">
           <p className="text-base text-gray-400 xl:text-center">
-            &copy; 2022 Watheia Labs, LLC. All rights reserved.
+            {site.copyrightText}
           </p>
         </div>
       </div>

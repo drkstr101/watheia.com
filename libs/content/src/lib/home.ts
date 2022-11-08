@@ -66,26 +66,26 @@ export const blogPosts = [
   },
 ];
 
-export const engineeringFeatures = [
+export const transformationFeatures = [
   {
     id: 1,
-    name: 'Digital transformations',
+    name: 'Custom software development',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Improve your competitive advantage by launching new product lines or increasing efficiency with back-office tools built for your domain experts.',
     icon: GlobeAltIcon,
   },
   {
     id: 2,
-    name: 'Custom software development',
+    name: 'Systems integration & automation',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Automate existing workflows and technology systems with high confidence by utilizing our take on Enterprise Integration Patterns (EIP).',
     icon: ScaleIcon,
   },
   {
     id: 3,
-    name: 'Staff augmentation',
+    name: 'DevOps & cloud solutions',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Get the most from serverless infrastructure with our finely tuned Platform as a Service (PaaS) designed to get you up and running with enterprise-grade security and stability without breaking the bank.',
     icon: BoltIcon,
   },
 ];

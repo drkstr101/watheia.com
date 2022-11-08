@@ -1,4 +1,4 @@
-import config from '@waweb/config';
+import { site } from '@waweb/content';
 
 describe('home', () => {
   beforeEach(() => cy.visit('/'));
@@ -8,6 +8,6 @@ describe('home', () => {
     // cy.login('my-email@something.com', 'myPassword');
 
     // Function helper example, see `../support/app.po.ts` file
-    cy.get('h1').should('have.text', config.description);
+    cy.get('h1').should('have.text', site.description);
   });
 });
