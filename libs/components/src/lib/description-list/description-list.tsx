@@ -1,3 +1,10 @@
+import { SVGProps } from 'react';
+
+export interface IconProps extends SVGProps<SVGSVGElement> {
+  title?: string;
+  titleId?: string;
+}
+
 export interface DescriptionListItem {
   id: number;
   icon: (props: IconProps) => JSX.Element;
