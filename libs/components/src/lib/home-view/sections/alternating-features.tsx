@@ -1,4 +1,5 @@
-import { SectionHeading, DescriptionList } from '@waweb/components';
+import DescriptionList from '../../description-list';
+import SectionHeading from '../../section-heading';
 import Image from 'next/image';
 import { home } from '@waweb/content';
 

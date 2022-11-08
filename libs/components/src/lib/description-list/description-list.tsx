@@ -1,9 +1,14 @@
-import { Feature } from '@waweb/types';
+export interface DescriptionListItem {
+  id: number;
+  icon: (props: IconProps) => JSX.Element;
+  name: string;
+  description: string;
+}
 
 export interface DescriptionListProps {
   title: string;
   description: string;
-  items: Feature[];
+  items: DescriptionListItem[];
 }
 
 export function DescriptionList({

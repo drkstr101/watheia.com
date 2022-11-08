@@ -1,4 +1,4 @@
-import { SectionHeading } from '@waweb/components';
+import SectionHeading from '../../section-heading';
 import { home } from '@waweb/content';
 import Image from 'next/image';
 import Link from 'next/link';

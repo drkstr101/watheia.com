@@ -1,5 +1,5 @@
 import { ChevronRightIcon } from '@heroicons/react/20/solid';
-import { CloudIllustration } from '@waweb/components';
+import CloudIllustration from '../../cloud-illustration';
 import Link from 'next/link';
 
 export default function Hero() {

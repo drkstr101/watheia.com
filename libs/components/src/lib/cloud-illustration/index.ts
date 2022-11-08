@@ -1,2 +1,2 @@
-export { CloudIllustration } from './cloud-illustration';
+export { default, CloudIllustration } from './cloud-illustration';
 export type { CloudIllustrationProps } from './cloud-illustration';

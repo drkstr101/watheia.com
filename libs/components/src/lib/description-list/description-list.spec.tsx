@@ -1,10 +1,9 @@
 import { render } from '@testing-library/react';
 
 import { BoltIcon, GlobeAltIcon, ScaleIcon } from '@heroicons/react/24/outline';
-import DescriptionList from './description-list';
-import { Feature } from '@waweb/types';
+import DescriptionList, { DescriptionListItem } from './description-list';
 
-export const sampleFeatures: Feature[] = [
+export const sampleFeatures: DescriptionListItem[] = [
   {
     id: 1,
     name: 'Digital transformations',

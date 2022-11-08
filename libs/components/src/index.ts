@@ -1,5 +1,5 @@
 export * from './lib/cloud-illustration';
-export * from './lib/description-list';
+// export * from './lib/description-list';
 export * from './lib/footer';
 export * from './lib/header';
 export * from './lib/home-view';
