@@ -1,6 +1,6 @@
+import { site } from '@waweb/content';
 import Image from 'next/image';
 import Link from 'next/link';
-import { site } from '@waweb/content';
 import { SVGProps } from 'react';
 
 const icons = {
@@ -149,7 +149,7 @@ export function Footer(props: FooterProps) {
           </div>
         </div>
         <div className="mt-12 border-t border-gray-200 py-8">
-          <p className="text-base text-gray-400 xl:text-center">
+          <p className="text-xs text-gray-400 xl:text-center">
             {site.copyrightText}
           </p>
         </div>

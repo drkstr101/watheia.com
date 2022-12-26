@@ -2,8 +2,7 @@ export const host = 'https://watheia.com';
 
 export const locale = 'en_US';
 
-export const copyrightText =
-  '&copy; 2022 Watheia Labs, LLC. All rights reserved.';
+export const copyrightText = '© 2022 Watheia Labs, LLC. All rights reserved.';
 
 export const navigation = {
   primary: [
