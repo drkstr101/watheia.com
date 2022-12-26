@@ -3,6 +3,12 @@
     "nrwl.angular-console",
     "esbenp.prettier-vscode",
     "firsttris.vscode-jest-runner",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
+    "orta.vscode-jest",
+    "christian-kohler.path-intellisense",
+    "csstools.postcss",
+    "prisma.prisma-insider",
+    "bradlc.vscode-tailwindcss"
   ]
 }

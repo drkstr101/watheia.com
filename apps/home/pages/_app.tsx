@@ -1,17 +1,26 @@
+import { Fira_Mono, Fira_Sans_Condensed } from '@next/font/google';
+import { Layout } from '@waweb/components';
+import clsx from 'clsx';
 import { AppProps } from 'next/app';
-import Head from 'next/head';
 import './styles.css';
+
+const sansFont = Fira_Sans_Condensed({
+  weight: ['300', '400', '700', '900'],
+  style: ['italic', 'normal'],
+  subsets: ['latin-ext'],
+});
+
+const monoFont = Fira_Mono({
+  weight: ['400', '500', '700'],
+  style: ['normal'],
+  subsets: ['latin-ext'],
+});
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <Head>
-        <title>Welcome to home!</title>
-      </Head>
-      <main className="app">
-        <Component {...pageProps} />
-      </main>
-    </>
+    <Layout className={clsx(sansFont, monoFont)}>
+      <Component {...pageProps} />
+    </Layout>
   );
 }
 

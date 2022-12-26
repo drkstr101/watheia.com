@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@waweb/components": ["libs/components/src/index.ts"],
+      "@waweb/content": ["libs/content/src/index.ts"],
+      "@waweb/types": ["libs/types/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
